@@ -1,0 +1,15 @@
+
+=== Mon Apr 21 10:00:49 2025
+
+Packages were changed.
+Update Mode: mergeDefaultDependencies
+
+The following packages were updated:
+  com.unity.inputsystem from version 1.8.2 to 1.14.0
+  com.unity.render-pipelines.universal from version 14.0.7 to 14.0.12
+  com.unity.textmeshpro from version 3.0.6 to 3.0.7
+  com.unity.timeline from version 1.7.6 to 1.7.7
+  com.unity.visualscripting from version 1.9.2 to 1.9.4
+  com.unity.xr.arcore from version 5.1.4 to 5.2.0
+  com.unity.xr.arfoundation from version 5.1.4 to 5.2.0
+  com.unity.xr.arkit from version 5.1.4 to 5.2.0
