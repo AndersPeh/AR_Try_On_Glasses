@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject welcomePanel, homePanel, tryOnPanel;
+    public GameObject welcomePanel, homePanel, tryOnPanel, settingsPanel;
 
     void Start()
     {
         welcomePanel.SetActive(true);
         homePanel.SetActive(false);
         tryOnPanel.SetActive(false);
+        settingsPanel.SetActive(false);
     }
 
     public void OnGetStarted()
@@ -23,5 +24,11 @@ public class UIManager : MonoBehaviour
     {
         homePanel.SetActive(false);
         tryOnPanel.SetActive(true);
+    }
+
+    public void OnSettings()
+    {
+        homePanel.SetActive(false);
+        settingsPanel.SetActive(true);
     }
 }

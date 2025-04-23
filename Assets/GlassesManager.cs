@@ -1,96 +1,77 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
+using TMPro;
+
 
 public class GlassesManager : MonoBehaviour
 {
-    public GameObject[] glassesPrefabs; // Array of glasses models
-    public TMPro.TextMeshProUGUI infoText; // Optional: for store info
-    public Transform recommendationPanel; // UI panel for recommendations
-    public GameObject recommendationItemPrefab; // Prefab for recommendation items
-    private int currentIndex = 0;
-    private ARFaceManager faceManager;
-    private Gamification gamification;
+    [Header("AR")]
+    public ARFaceManager faceManager;          // Drag XR Origin ▸ AR Face Manager here
+
+    [Header("Glasses")]
+    public GameObject[] glassesPrefabs;        // Size = 16, drag prefabs in
+    int currentIndex = 0;
+
+    [Header("Rewards")]
+    public RewardsManager rewardsManager;      // Drag Canvas (RewardsManager) here
+
+    [Header("UI")]
+    public UIManager uiManager;
 
     void Start()
     {
-        faceManager = GetComponent<ARFaceManager>();
-        gamification = FindObjectOfType<Gamification>();
         UpdateGlasses();
     }
 
-    void Update()
+    public void SwitchToGlasses(int index)
     {
-        if (Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Ended)
-            {
-                if (touch.deltaPosition.x > 50) PrevGlasses();
-                else if (touch.deltaPosition.x < -50) NextGlasses();
-            }
-        }
+        if (index < 0 || index >= glassesPrefabs.Length) return;
+        currentIndex = index;
+        UpdateGlasses();
+        uiManager.OnTryOn();
     }
 
-    public void NextGlasses()
+    public void NextGlasses()                   // Right‑arrow button
     {
         currentIndex = (currentIndex + 1) % glassesPrefabs.Length;
         UpdateGlasses();
     }
 
-    public void PrevGlasses()
+    public void PreviousGlasses()               // Left‑arrow button
     {
         currentIndex = (currentIndex - 1 + glassesPrefabs.Length) % glassesPrefabs.Length;
         UpdateGlasses();
     }
 
-    void UpdateGlasses()
+
+    public void UpdateGlasses()
     {
-        string frameName = glassesPrefabs[currentIndex].name;
-        string shape = GetShapeFromName(frameName);
+        // Update the facePrefab for new detections
         faceManager.facePrefab = glassesPrefabs[currentIndex];
-        gamification.TryGlasses(shape, frameName);
-        if (infoText != null) infoText.text = $"Trying: {frameName}";
 
-        // Get and display recommendations
-        GameObject[] recommendations = GetRecommendations(shape);
-        DisplayRecommendations(recommendations);
-    }
-
-    string GetShapeFromName(string name)
-    {
-        if (name.Contains("oval")) return "oval";
-        if (name.Contains("rectangle")) return "rectangle";
-        if (name.Contains("round")) return "round";
-        if (name.Contains("oversized")) return "oversized";
-        return "unknown";
-    }
-
-    public GameObject[] GetRecommendations(string currentShape)
-    {
-        return System.Array.FindAll(glassesPrefabs, prefab =>
-            GetShapeFromName(prefab.name) == currentShape && prefab != glassesPrefabs[currentIndex]
-        );
-    }
-
-    void DisplayRecommendations(GameObject[] recommendations)
-    {
-        foreach (Transform child in recommendationPanel)
+        // Update existing tracked faces
+        foreach (var face in faceManager.trackables)
         {
-            Destroy(child.gameObject);
+            // Check if the face has a child (the current glasses instance)
+            if (face.transform.childCount > 0)
+            {
+                Destroy(face.transform.GetChild(0).gameObject);
+            }
+            // Instantiate the new glasses prefab as a child of the face
+            var newGlasses = Instantiate(glassesPrefabs[currentIndex], face.transform);
+            newGlasses.transform.localPosition = new Vector3(0, 0.01f, 0.02f); // Offset: up 1cm, forward 2cm
+            newGlasses.transform.localScale = Vector3.one * 0.1f; // Scale to ~10% of meter units
+            newGlasses.transform.localRotation = Quaternion.identity;
         }
 
-        foreach (GameObject recommendedGlasses in recommendations)
-        {
-            GameObject item = Instantiate(recommendationItemPrefab, recommendationPanel);
-            item.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = recommendedGlasses.name;
-            int index = System.Array.IndexOf(glassesPrefabs, recommendedGlasses);
-            item.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(() => SwitchToGlasses(index));
-        }
-    }
-
-    void SwitchToGlasses(int index)
-    {
-        currentIndex = index;
-        UpdateGlasses();
+        // Notify the rewards system
+        string shape = currentIndex < 4 ? "oval"
+                    : currentIndex < 8 ? "oversized"
+                    : currentIndex < 12 ? "rectangle"
+                    : "round";
+        rewardsManager.TryFrame(shape);
     }
 }
+
