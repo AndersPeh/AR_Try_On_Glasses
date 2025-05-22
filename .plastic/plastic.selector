@@ -1,3 +1,4 @@
-repository "FrameXperience/FrameXperience@16768261816573@cloud"
+repository "FrameXperience_01/FrameXperience_01@16768261816573@cloud"
   path "/"
-    smartbranch "/main/Anders"
+    br "/main"
+    co "/main"
