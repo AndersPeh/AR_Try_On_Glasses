@@ -1,4 +1,4 @@
-repository "FrameXperience_01/FrameXperience_01@16768261816573@cloud"
+repository "FrameXperience_/FrameXperience_@16768261816573@cloud"
   path "/"
     br "/main"
     co "/main"

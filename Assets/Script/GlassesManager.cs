@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
+using System.Linq;
 
 public class GlassesManager : MonoBehaviour
 {
@@ -17,9 +18,6 @@ public class GlassesManager : MonoBehaviour
     public GameObject arPanel;
     public GameObject settingsPanel;
 
-    [Header("Stats UI")]
-    public ScrollRect statsScrollView;      // StatsScrollView
-
     [Header("Overall Banner UI")]
     public GameObject overallStatsPanel;  // assign OverallStatsPanel here
     public Text overallTitle;       // assign OverallTitle
@@ -30,15 +28,24 @@ public class GlassesManager : MonoBehaviour
     public GameObject voucherCodePanel;
     public GameObject notMetReqPanel;
 
+    [Header("Search UI")]
+    public InputField searchInput;
+
     [Header("Voucher Code UI")]
     public Text voucherCodeText;
     bool popupShown;
     bool codeShown;
     const int capPerStyle = 3;
 
+    [Header("Category Filter")]
+    public Transform selectionContent;   // assign: ScrollView→Viewport→Content under SelectionPanel
+    public Transform arScrollContent;    // assign: ARPanel→ScrollView→Viewport→Content
+
+    string currentCategory = "All";
+
 
     // Internal try-counts by category
-    Dictionary<string, int> tryCounts = new Dictionary<string, int>();
+    Dictionary<string, HashSet<int>> triedByCategory = new Dictionary<string, HashSet<int>>();
 
     void Awake()
     {
@@ -47,12 +54,23 @@ public class GlassesManager : MonoBehaviour
         {
             var info = go.GetComponent<GlassesInfo>();
             if (info == null) continue;
-            string cat = info.category;
-            int saved = PlayerPrefs.GetInt("TryCount_" + cat, 0);
-            tryCounts[cat] = saved;
+            var cat = info.category;
+            if (!triedByCategory.ContainsKey(cat))
+                triedByCategory[cat] = new HashSet<int>();
+
+            // load previously tried indices (stored as CSV)
+            var csv = PlayerPrefs.GetString("Tried_" + cat, "");
+            if (!string.IsNullOrEmpty(csv))
+            {
+                foreach (var s in csv.Split(','))
+                    if (int.TryParse(s, out var idx))
+                        triedByCategory[cat].Add(idx);
+            }
             popupShown = PlayerPrefs.GetInt("VoucherPopupShown", 0) == 1;
             codeShown = PlayerPrefs.GetInt("VoucherCodeShown", 0) == 1;
+            FilterByCategory("All");
         }
+       
     }
 
     // Called by each grid button
@@ -61,12 +79,15 @@ public class GlassesManager : MonoBehaviour
         selectionPanel.SetActive(false);
         arPanel.SetActive(true);
         SelectGlasses(idx);
+        FilterARScroll();
     }
 
     public void ShowCamera()
     {
         selectionPanel.SetActive(false);
         arPanel.SetActive(true);
+        settingsPanel.SetActive(false);
+        overallStatsPanel.SetActive(false);
     }
 
     // Called by both initial ShowAR and AR scroll buttons
@@ -80,21 +101,38 @@ public class GlassesManager : MonoBehaviour
                 face.transform.GetChild(i).gameObject.SetActive(i == idx);
 
         // B) Record the try
-        var cat = glassesPrefabs[idx]
-                      .GetComponent<GlassesInfo>()
-                      .category;
-        tryCounts[cat]++;
-        PlayerPrefs.SetInt("TryCount_" + cat, tryCounts[cat]);
-        PlayerPrefs.Save();
-        UpdateOverallBanner();
+        var cat = glassesPrefabs[idx].GetComponent<GlassesInfo>().category;
+        var set = triedByCategory[cat];
+        if (set.Add(idx))
+        {
+            // persist the updated set as CSV
+            PlayerPrefs.SetString(
+                "Tried_" + cat,
+                string.Join(",", set)
+            );
+            PlayerPrefs.Save();
+            UpdateOverallBanner();
+        }
 
     }
+
+    void ClearARFaces()
+{
+    for (int i = 0; i < facePrefab.transform.childCount; i++)
+            facePrefab.transform.GetChild(i).gameObject.SetActive(false);
+    foreach (var face in faceManager.trackables)
+        for (int i = 0; i < face.transform.childCount; i++)
+            face.transform.GetChild(i).gameObject.SetActive(false);
+}
 
     // Back from AR to selection
     public void ShowSelection()
     {
         arPanel.SetActive(false);
         selectionPanel.SetActive(true);
+        ClearARFaces();
+        settingsPanel.SetActive(false);
+        overallStatsPanel.SetActive(false);
     }
 
     // Called by “View Stats” button on SelectionPanel
@@ -105,29 +143,21 @@ public class GlassesManager : MonoBehaviour
         arPanel.SetActive(false);
         voucherPagePanel.SetActive(false);
         settingsPanel.SetActive(true);
+        ClearARFaces();
         overallStatsPanel.SetActive(true);
         UpdateOverallBanner();
         // scroll to top
-        statsScrollView.verticalNormalizedPosition = 1f;
-    }
-
-    // Back from Stats to Selection
-    public void ShowSelectionFromStats()
-    {
-        settingsPanel.SetActive(false);
-        overallStatsPanel.SetActive(false);  // hide banner
-        selectionPanel.SetActive(true);
     }
 
     void UpdateOverallBanner()
     {
         // 1) Compute capped total
         int overall = 0;
-        foreach (var kv in tryCounts)
-            overall += Mathf.Min(kv.Value, capPerStyle);
+        foreach (var kv in triedByCategory)
+            overall += Mathf.Min(kv.Value.Count, capPerStyle);
 
         // 2) Compute max possible = styles × cap
-        int max = tryCounts.Count * capPerStyle;
+        int max = triedByCategory.Count * capPerStyle;
 
         // 3) Set the texts
         if (settingsPanel.activeSelf == true)
@@ -151,7 +181,7 @@ public class GlassesManager : MonoBehaviour
                 popupShown = true;
                 PlayerPrefs.SetInt("VoucherPopupShown", 1);
                 PlayerPrefs.Save();
-                Invoke("ShowVoucherPopup", 4.0f);
+                Invoke("ShowVoucherPopup", 3.0f);
             }
         }
     }
@@ -172,6 +202,56 @@ public class GlassesManager : MonoBehaviour
         notMetReqPanel.SetActive(false);
     }
 
+    public void FilterByCategory(string category)
+    {
+        currentCategory = category;
+        FilterSelection();
+        // If AR is already open, also filter it immediately
+        if (arPanel.activeSelf)
+            FilterARScroll();
+    }
+
+    void FilterSelection()
+    {
+        foreach (Transform btn in selectionContent)
+        {
+            var info = btn.GetComponent<GlassesButton>();
+            bool show = currentCategory == "All" || info.category == currentCategory;
+            btn.gameObject.SetActive(show);
+        }
+    }
+
+    void Start()
+    {
+        // clear it on start
+        searchInput.text = "";
+        searchInput.onValueChanged.AddListener(FilterBySearch);
+    }
+
+    public void FilterBySearch(string query)
+    {
+        query = query.Trim().ToLower();
+
+        foreach (Transform btn in selectionContent)
+        {
+            var gb = btn.GetComponent<GlassesButton>();
+            bool matches = string.IsNullOrEmpty(query)
+                || gb.stores.ToLower().Contains(query)
+                || gb.category.ToLower().Contains(query)
+                || glassesPrefabs[gb.index].name.ToLower().Contains(query);
+            btn.gameObject.SetActive(matches);
+        }
+    }
+
+    void FilterARScroll()
+    {
+        foreach (Transform btn in arScrollContent)
+        {
+            var info = btn.GetComponent<GlassesButton>();
+            bool show = currentCategory == "All" || info.category == currentCategory;
+            btn.gameObject.SetActive(show);
+        }
+    }
 
     // hooked to “Get Voucher” button
     public void GoToVoucherPage()
@@ -182,6 +262,7 @@ public class GlassesManager : MonoBehaviour
             settingsPanel.SetActive(false);
             voucherPopupPanel.SetActive(false);
             voucherPagePanel.SetActive(true);
+            ClearARFaces();
             voucherCodePanel.SetActive(false);
         }
         else
