@@ -1,4 +1,3 @@
 libil2cpp.so
-Library\Bee\artifacts\Android\d8kzr\libil2cpp.so
-Library\Bee\artifacts\Android\il2cppOutput\build\arm64-v8a\libil2cpp.dbg.so
-Library\Bee\artifacts\objcopy_5lmi\libil2cpp.dbg.so
+libil2cpp.dbg.so
+Library/

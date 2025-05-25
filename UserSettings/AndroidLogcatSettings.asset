@@ -1,0 +1,669 @@
+{
+    "m_SelectedDeviceId": "UOUW854X9LMR55CY",
+    "m_SelectedProcess": {
+        "deviceId": "UOUW854X9LMR55CY",
+        "name": "com.FrameXperience.FrameXperience_01",
+        "processId": 12306,
+        "exited": false
+    },
+    "m_SelectedPriority": 0,
+    "m_KnownProcessesForSerialization": [
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.sec.android.app.launcher",
+            "processId": 5099,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 11436,
+            "exited": true
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 18948,
+            "exited": true
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 15873,
+            "exited": true
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 15093,
+            "exited": true
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 18620,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 23599,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 24596,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 28653,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 30321,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 554,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 16863,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 27345,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 15332,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 23091,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 30720,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 6953,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 13499,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 20623,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 22170,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 27035,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 28966,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 2291,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 9094,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 14532,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 19237,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 21698,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 26588,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 32506,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 4168,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 8907,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 20375,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 22643,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 25934,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 3050,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 13120,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 25059,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 28088,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 31070,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 4092,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 8941,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 11642,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 13550,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 18585,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 20316,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 32222,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 11082,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 15655,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 18813,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 26032,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 431,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 3286,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 12526,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 15580,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 23818,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 15996,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 18323,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 22662,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 25298,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 27715,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 29426,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 31027,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 32131,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 25236,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 17254,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 23063,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 25230,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 32708,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 6257,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 23051,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 30254,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 11289,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 7714,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 10962,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 13647,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 17763,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 20120,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 26819,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 2988,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 21946,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 809,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 10627,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 14497,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 19608,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 17225,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 25096,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 331,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 9660,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 16087,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 20691,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 11851,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 14135,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CW20J8QPZ",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 20840,
+            "exited": false
+        },
+        {
+            "deviceId": "UOUW854X9LMR55CY",
+            "name": "com.FrameXperience.FrameXperience_01",
+            "processId": 12306,
+            "exited": false
+        }
+    ],
+    "m_Tags": {
+        "m_Entries": [
+            {
+                "m_Name": "Filter by all listed tags",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "No Filter",
+                "m_Selected": true
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Tag Control...",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Unity",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "CRASH",
+                "m_Selected": false
+            }
+        ]
+    },
+    "m_ExtraWindowState": {
+        "Type": 0,
+        "Height": 0.0
+    },
+    "m_MemoryViewerState": {
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "MemoryGroup": 2,
+        "AutoCapture": true
+    },
+    "m_FilterOptions": {
+        "m_Filter": "",
+        "m_UseRegularExpressions": false,
+        "m_MatchCase": false
+    },
+    "m_SymbolPaths": [],
+    "m_CaptureVideoSettings": {
+        "TimeLimitEnabled": false,
+        "TimeLimit": 180,
+        "VideoSizeEnabled": false,
+        "VideoSizeX": 1280,
+        "VideoSizeY": 720,
+        "BitRateEnabled": false,
+        "BitRateK": 20000,
+        "DisplayIdEnabled": false,
+        "DisplayId": ""
+    },
+    "m_ScreenCaptureSettings": {
+        "Mode": 0,
+        "m_LastSaveLocation": [
+            "D:\\Unity Project\\FrameXperience_01",
+            "D:\\Unity Project\\FrameXperience_01"
+        ]
+    },
+    "m_QueryLayoutSettings": {
+        "LastLayoutSaveLocation": "",
+        "LastScreenshotSaveLocation": ""
+    },
+    "m_InputSettings": {
+        "ShiftModifier": false,
+        "SendText": "",
+        "PosixKillSignal": 0,
+        "TargetProcess": {
+            "deviceId": "",
+            "name": "",
+            "processId": 0,
+            "exited": false
+        }
+    },
+    "m_AutoScroll": 2
+}
