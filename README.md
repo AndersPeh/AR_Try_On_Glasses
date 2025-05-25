@@ -15,7 +15,14 @@ This project allows users to virtually try on different pairs of glasses using A
 You can directly try the application on your Android device by downloading and installing the **frameXperience.apk** file.
 
 ## App Screenshots:
-![SplashScreen](https://github.com/user-attachments/assets/2f357c9c-5072-4479-882c-6ef80705d834) ![WelcomeScreen](https://github.com/user-attachments/assets/0203a941-190c-4c98-83a3-c6ba581b3b2d)
+<table>
+  <tr>
+    <td><img src="AR_Try_On_Glasses/App_Screenshots/WelcomeScreen.jpg" width="100%"></td>
+    <td><img src="AR_Try_On_Glasses/App_Screenshots/Tutorial1.jpg" width="100%"></td>
+    <td><img src="AR_Try_On_Glasses/App_Screenshots/Tutorial2.jpg" width="100%"></td>
+  </tr>
+</table>
+ ![WelcomeScreen](https://github.com/user-attachments/assets/0203a941-190c-4c98-83a3-c6ba581b3b2d)
 ![Tutorial1](https://github.com/user-attachments/assets/fc1ef644-6742-45ac-a1a7-594f105fa230) ![Tutorial2](https://github.com/user-attachments/assets/b1fbb0a6-8207-4510-8917-317fe8b778b5)
 ![Tutorial3](https://github.com/user-attachments/assets/392d358d-e195-4d48-ad14-05d2553e2f2c) ![CameraPermission](https://github.com/user-attachments/assets/a0e0a912-fd31-4607-8c29-87e7f86c0c68)
 ![PhoneSettings_CameraPermission](https://github.com/user-attachments/assets/b37cac86-f785-4b79-a503-6c975fd8b53f) ![HomeScreen](https://github.com/user-attachments/assets/e9fda47f-1d26-47b9-a5fd-7565424664e4)
