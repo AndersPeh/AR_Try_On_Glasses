@@ -17,9 +17,9 @@ You can directly try the application on your Android device by downloading and i
 ## App Screenshots:
 <table>
   <tr>
-    <td><img src="AR_Try_On_Glasses/App_Screenshots/WelcomeScreen.jpg" width="100%"></td>
-    <td><img src="AR_Try_On_Glasses/App_Screenshots/Tutorial1.jpg" width="100%"></td>
-    <td><img src="AR_Try_On_Glasses/App_Screenshots/Tutorial2.jpg" width="100%"></td>
+    <td><img src="App_Screenshots/WelcomeScreen.jpg" width="100%"></td>
+    <td><img src="App_Screenshots/Tutorial1.jpg" width="100%"></td>
+    <td><img src="App_Screenshots/Tutorial2.jpg" width="100%"></td>
   </tr>
 </table>
  ![WelcomeScreen](https://github.com/user-attachments/assets/0203a941-190c-4c98-83a3-c6ba581b3b2d)
