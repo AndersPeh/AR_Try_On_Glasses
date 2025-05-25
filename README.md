@@ -18,15 +18,16 @@ You can directly try the application on your Android device by downloading and i
 ![SplashScreen](https://github.com/user-attachments/assets/2f357c9c-5072-4479-882c-6ef80705d834) ![WelcomeScreen](https://github.com/user-attachments/assets/0203a941-190c-4c98-83a3-c6ba581b3b2d)
 ![Tutorial1](https://github.com/user-attachments/assets/fc1ef644-6742-45ac-a1a7-594f105fa230) ![Tutorial2](https://github.com/user-attachments/assets/b1fbb0a6-8207-4510-8917-317fe8b778b5)
 ![Tutorial3](https://github.com/user-attachments/assets/392d358d-e195-4d48-ad14-05d2553e2f2c) ![CameraPermission](https://github.com/user-attachments/assets/a0e0a912-fd31-4607-8c29-87e7f86c0c68)
-![HomeScreen](https://github.com/user-attachments/assets/e9fda47f-1d26-47b9-a5fd-7565424664e4) ![TryOnScreen_BeforeTapping](https://github.com/user-attachments/assets/82e547ef-c239-4a46-a7dc-19808df7abe0)
-![TryOnScreen_AfterTapping](https://github.com/user-attachments/assets/710945a3-23d0-48a8-a6a6-db9d49d48543)  ![Filter_MaskCategory](https://github.com/user-attachments/assets/68a0f81e-8391-4c3e-8c38-12e35e521a7f)
+![PhoneSettings_CameraPermission](https://github.com/user-attachments/assets/b37cac86-f785-4b79-a503-6c975fd8b53f) ![HomeScreen](https://github.com/user-attachments/assets/e9fda47f-1d26-47b9-a5fd-7565424664e4)
+![Filter_MaskCategory](https://github.com/user-attachments/assets/68a0f81e-8391-4c3e-8c38-12e35e521a7f) ![TryOnScreen_Before](https://github.com/user-attachments/assets/deb267d3-2099-4843-9c79-34ad15f7e4a2)
+![TryOnScreen_After](https://github.com/user-attachments/assets/42be61e3-9a55-4e8a-815f-0db8d3fb4ede) ![Voucher_PopOut](https://github.com/user-attachments/assets/fa7986f3-a2f0-46fb-8c40-c8bbf7b25df2)
 ![EmptyProgressBar](https://github.com/user-attachments/assets/56b1ff4e-e835-419b-8e35-7a27173e5662) ![Settings_FullProgressBar](https://github.com/user-attachments/assets/ce390177-5a1d-47f0-ac3d-bc1dbcde9400)
 ![Voucher_Redemption](https://github.com/user-attachments/assets/248ea62f-2aa7-4705-aa8b-57ca7f84e8e8) ![Voucher_Code](https://github.com/user-attachments/assets/3369bac0-885d-47c8-86b0-4545384bbaba) 
 
 ## Contributors:
 
-Peh Jy Fung
-Anon Kangpanich
+Peh Jy Fung,
+Anon Kangpanich,
 Patrick Carey 
 
 ## Technologies Used
