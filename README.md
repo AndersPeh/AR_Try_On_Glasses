@@ -14,6 +14,9 @@ This project allows users to virtually try on different pairs of glasses using A
 
 You can directly try the application on your Android device by downloading and installing the **frameXperience.apk** file.
 
+## Demo Video:
+https://www.youtube.com/watch?v=77nya6C8xmM
+
 ## App Screenshots:
 <table>
   <tr>
@@ -60,9 +63,9 @@ You can directly try the application on your Android device by downloading and i
 
 ## Contributors:
 
-Peh Jy Fung,
-Anon Kangpanich,
-Patrick Carey 
+Peh Jy Fung (jyfung.peh@griffithuni.edu.au),
+Anon Kangpanich (anon.kangpanich@griffithuni.edu.au),
+Patrick Carey (patrick.carey2@griffithuni.edu.au)
 
 ## Technologies Used
 
